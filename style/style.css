@@ -1,0 +1,204 @@
+/* start header */
+header {
+    padding: 0 100px;
+}
+
+.header {
+    border-bottom: hsl(220, 14%, 75%) 1px solid;
+    padding: 40px 0;
+}
+.header .logo {
+    display: inline;
+}
+
+.header .menu,
+.header .menu .menu-list {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header .menu .menu-list .menu-item {
+    display: inline;
+    list-style: none;
+    margin-right: 15px;
+    padding-bottom: 25px;
+    transition: border-bottom 0.1s ease;
+}
+
+.header .menu .menu-list .menu-item:hover {
+    border-bottom: hsl(26, 100%, 55%) 3px solid;
+}
+
+.header .menu .menu-list .menu-item a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+}
+
+.header .menu .right-icons {
+    display: inline;
+    float: right;
+}
+
+.header .menu .right-icons .cart {
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+
+.header .menu .right-icons .profile {
+    max-width: 40px;
+}
+/* End header */
+
+/* start content */
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 0px 150px 50px 150px;
+}
+
+.content .imger .main-image img {
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .imger .thumbnails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.content .imger .thumbnails img {
+    border-radius: 10px;
+    width: 70px;
+}
+
+.content .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.content .details .company {
+    color: hsl(26, 100%, 55%);
+    font-family: "font-bold";
+    margin-bottom: 20px;
+}
+.content .details .product-name {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.content .details .product-describtion {
+    margin-bottom: 25px;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.content .details .price-container {
+    margin-bottom: 25px;
+}
+.content .details .price-container .price {
+    font-family: "font-bold";
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.content .details .price-container .offer {
+    display: inline-block;
+    font-family: "font-bold";
+    font-size: 1.2rem;
+    margin-left: 5px;
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    padding: 3px;
+    border-radius: 5px;
+}
+.content .details .price-container .original-price {
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.content .details .input-field {
+    display: inline-flex;
+}
+
+.content .details .input-field input[type="number"] {
+    background-color: hsl(223, 64%, 98%);
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    max-width: 50px;
+    padding: 10px 0px;
+}
+
+.content .details .input-field .dec,
+.content .details .input-field .inc {
+    padding: 10px;
+    background-color: hsl(223, 64%, 98%);
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: hsl(26, 100%, 55%);
+    font-family: "font-bold";
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content .details .input-field .dec {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.content .details .input-field .inc {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.add-btn {
+    display: inline;
+    margin-left: 30px;
+    border: none;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    cursor: pointer;
+    font-family: "font-bold";
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 10px 40px;
+    transition: ease-in-out background-color 0.3s;
+
+    box-shadow: 0px 0px 54px 19px rgba(255, 125, 26, 0.16);
+    -webkit-box-shadow: 0px 0px 54px 19px rgba(255, 125, 26, 0.16);
+    -moz-box-shadow: 0px 0px 54px 19px rgba(255, 125, 26, 0.16);
+}
+
+.add-btn:hover {
+    background-color: transparent;
+    color: hsl(26, 100%, 55%);
+    border: hsl(26, 100%, 55%) 3px solid;
+}
+
+/* end content */
+
+/* thumbnail cover */
+.cover {
+    filter: opacity(70%);
+    border: hsl(26, 100%, 50%) solid 2px;
+}
