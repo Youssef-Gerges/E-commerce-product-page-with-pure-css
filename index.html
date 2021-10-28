@@ -16,23 +16,44 @@
 <body>
   <header>
     <div class="header">
-      <div class="logo">
-        <img src="./images/logo.svg" alt="logo">
-      </div>
+      <div class="left">
 
-      <div class="menu">
-        <ul class="menu-list">
-          <li class="menu-item"><a href="#">Collections</a></li>
-          <li class="menu-item"><a href="#">Men</a></li>
-          <li class="menu-item"><a href="#">Women</a></li>
-          <li class="menu-item"><a href="#">About</a></li>
-          <li class="menu-item"><a href="#">Contact</a></li>
-        </ul>
-
-        <div class="right-icons">
-          <img src="./images/icon-cart.svg" alt="cart" class="cart">
-          <img src="./images/image-avatar.png" alt="profile" class="profile">
+        <div class="header-humburger">
+          <img src="./images/icon-menu.svg" onclick="showMenu()">
         </div>
+
+        <div class="logo">
+          <img src="./images/logo.svg" alt="logo">
+        </div>
+
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-item"><img src="./images/icon-close.svg" alt="" class="menu-close" onclick="hideMenu()">
+            </li>
+            <li class="menu-item"><a href="#">Collections</a></li>
+            <li class="menu-item"><a href="#">Men</a></li>
+            <li class="menu-item"><a href="#">Women</a></li>
+            <li class="menu-item"><a href="#">About</a></li>
+            <li class="menu-item"><a href="#">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="right-icons">
+        <img src="./images/icon-cart.svg" alt="cart" class="cart" onclick="showCart()">
+        <!-- cart -->
+        <div class="cart-box">
+          <div class="cart-title">
+            <h3 class="title">Cart</h3>
+          </div>
+          <div class="cart-content">
+            <p>Your cart is empty</p>
+
+          </div>
+        </div>
+
+        <!-- end cart -->
+        <img src="./images/image-avatar.png" alt="profile" class="profile">
       </div>
     </div>
   </header>
@@ -41,7 +62,9 @@
     <!-- product images -->
     <div class="imger">
       <div class="main-image">
-        <img id="main-image" src="./images/image-product-1.jpg">
+        <img src="./images/icon-previous.svg" alt="" onclick="previousImage()" class="back">
+        <img id="main-image" src="./images/image-product-1.jpg" onclick="showModel()" class="main-img">
+        <img src="./images/icon-next.svg" alt="" onclick="nextImage()" class="next">
       </div>
 
       <div class="thumbnails">
@@ -65,14 +88,43 @@
         <p class="original-price">$250.00</p>
       </div>
       <div class="input-field">
-        <button class="dec" onclick="decrease()">-</button>
-        <input type="number" value="0" id="counter" readonly>
-        <button class="inc" onclick="increase()">+</button>
-        <button class="add-btn"> Add to cart </button>
+        <div class="counter">
+          <button class="dec" onclick="decrease()"><img src="./images/icon-minus.svg" alt=""></button>
+          <input type="number" value="1" id="counter" readonly>
+          <button class="inc" onclick="increase()"><img src="./images/icon-plus.svg" alt=""></button>
+        </div>
+        <button class="add-btn" onclick="addItem()">Add to cart</button>
       </div>
     </div>
   </section>
 
+
+  <!-- model -->
+  <div class="model">
+    <div class="close">
+      <img src="./images//icon-close.svg" onclick="showModel()">
+    </div>
+    <div class="preview">
+      <div class="back">
+        <img src="./images/icon-previous.svg" alt="" onclick="previousImage()">
+      </div>
+      <div class="image">
+        <img src="./images/image-product-1.jpg" alt="" id="modelMainImage">
+      </div>
+      <div class="next">
+        <img src="./images/icon-next.svg" alt="" onclick="nextImage()">
+      </div>
+    </div>
+    <div class="thumbnails">
+      <img src="./images/image-product-1-thumbnail.jpg" onclick="changeModelImage(this)" class="cover">
+      <img src="./images/image-product-2-thumbnail.jpg" onclick="changeModelImage(this)">
+      <img src="./images/image-product-3-thumbnail.jpg" onclick="changeModelImage(this)">
+      <img src="./images/image-product-4-thumbnail.jpg" onclick="changeModelImage(this)">
+    </div>
+  </div>
+  </div>
+
+  <!-- end model -->
 
 
 
